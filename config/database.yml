@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: mytraveltracker_production
+  username: mytraveltracker
+  password: <%= ENV["MYTRAVELTRACKER_DATABASE_PASSWORD"] %>
